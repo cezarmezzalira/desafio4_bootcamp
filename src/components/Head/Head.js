@@ -7,7 +7,7 @@ import logosvg from '../../assets/facebook.svg';
 class Head extends Component {
   render() {
     return (
-      <div class='header'>
+      <div className='header'>
         <img src={logosvg} />
         <a href=''>Meu Perfil</a>
       </div>
