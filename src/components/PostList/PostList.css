@@ -2,3 +2,7 @@ div.postlist {
   flex: 1;
   margin: 10px;
 }
+
+div.postlist ul {
+  list-style: none;
+}

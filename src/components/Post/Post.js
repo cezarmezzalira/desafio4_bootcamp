@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
+import avatar from '../../assets/diego.jpg';
 
-import ProfileImg from '../ProfileImg/ProfileImg';
+import Comment from '../Comment/Comment';
+
+import './Post.css';
 
 class Post extends Component {
   render() {
-    const { data } = this.props;
+    const { data: post } = this.props;
 
     return (
       <li className='post'>
-        {console.log(data)}
-
-        <div className='user'>
-          <ProfileImg name={data.author.avatar} />
-          <a href=''>{data.author.name}</a>
-        </div>
-
         <div className='content'>
-          <strong>{data.date}</strong>
-          <p>{data.content}</p>
+          <div className='user'>
+            <img src={post.author.avatar} alt='' />
+            <div className='userinfo'>
+              <a href=''>{post.author.name}</a>
+              <span>{post.date}</span>
+            </div>
+          </div>
+          <div className='post'>
+            <p>{post.content}</p>
+          </div>
+          <div className='comments'>
+            <ul>
+              {post.comments.map(comment => (
+                <Comment key={comment.id} data={comment} />
+              ))}
+            </ul>
+          </div>
         </div>
-
-        <ul></ul>
       </li>
     );
   }
