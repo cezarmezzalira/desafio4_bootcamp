@@ -1,0 +1,39 @@
+li.comment {
+  display: flex;
+  flex-direction: row;
+}
+
+li.comment p {
+  background: #eeeeee;
+  margin-top: 10px;
+  border-radius: 20px;
+  flex-grow: initial;
+  min-height: 40px;
+  min-width: 623px;
+  padding: 15px;
+}
+
+li.comment img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.commentUser {
+  padding: 10px;
+}
+
+div.commentContent {
+  padding-left: 10px;
+}
+
+div.commentContent p {
+  color: #3e3e3e;
+  font-size: 13px;
+}
+
+div.commentContent p a {
+  text-decoration: none;
+  color: #3e3e3e;
+  font-size: 13px;
+  font-weight: bold;
+}
